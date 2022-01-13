@@ -6,21 +6,11 @@
 /*   By: egomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 20:19:07 by egomez-a          #+#    #+#             */
-/*   Updated: 2022/01/07 20:23:01 by egomez-a         ###   ########.fr       */
+/*   Updated: 2022/01/11 11:38:52 by egomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
-
-void	open_window(t_game *game)
-{
-	game->mlx = mlx_init();
-	game->window = new_window(game->mlx, game->map.cols * 32,
-			game->map.lines * 32, "Bienvenido al juego de so_long!");
-	game->moves = 0;
-	img_create(game);
-	paint_game(game);
-}
 
 int	paint_game(t_game *game)
 {
@@ -58,4 +48,14 @@ t_window	new_window(void *mlx, int widht, int height, char *name)
 	window.size.x = widht;
 	window.size.y = height;
 	return (window);
+}
+
+void	open_window(t_game *game)
+{
+	game->mlx = mlx_init();
+	game->window = new_window(game->mlx, game->map.cols * 32,
+			game->map.lines * 32, "Bienvenido al juego de so_long!");
+	game->moves = 0;
+	img_create(game);
+	paint_game(game);
 }

@@ -6,7 +6,7 @@
 /*   By: egomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 14:15:16 by egomez-a          #+#    #+#             */
-/*   Updated: 2022/01/10 10:37:51 by egomez-a         ###   ########.fr       */
+/*   Updated: 2022/01/13 10:18:54 by egomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int	main(int argc, char **argv)
 	t_game	game;
 
 	game.map.lines = 0;
+	atexit(leaks);
 	if (argc == 2)
 	{
 		if (check_map_extension(argv[1]))

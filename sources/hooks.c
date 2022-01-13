@@ -6,7 +6,7 @@
 /*   By: egomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 18:59:18 by egomez-a          #+#    #+#             */
-/*   Updated: 2022/01/07 19:06:14 by egomez-a         ###   ########.fr       */
+/*   Updated: 2022/01/11 11:39:46 by egomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,4 @@ void	game_play(t_game *game)
 {
 	mlx_hook(game->window.reference, 2, 1L << 0, key_press, game);
 	mlx_hook(game->window.reference, 17, 1L << 17, close_game, game);
-	mlx_hook(game->window.reference, 9, 1L << 21, paint_game, game);
 }
